@@ -2,12 +2,14 @@
 
 namespace app\modules\admin\controllers;
 
+use app\models\ImageUpload;
 use Yii;
 use app\models\Article;
 use app\models\ArticleSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use yii\web\UploadedFile;
 
 /**
  * ArticleController implements the CRUD actions for Article model.
@@ -106,6 +108,16 @@ class ArticleController extends Controller
         return $this->redirect(['index']);
     }
 
+    public function actionSetImage($id){
+        $model = new ImageUpload;
+
+        if(Yii::$app->request->isPost){
+            $file = UploadedFile::getInstance($model,'image');
+            $model->uploadFile($file);
+        }
+
+        return $this->render('image',['model'=>$model]);
+    }
     /**
      * Finds the Article model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.
@@ -121,4 +133,6 @@ class ArticleController extends Controller
             throw new NotFoundHttpException('The requested page does not exist.');
         }
     }
+
+
 }
