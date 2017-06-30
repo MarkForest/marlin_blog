@@ -39,7 +39,7 @@ class ImageUpload extends Model{
     }
 
     public function deleteCurrentImage($currentImage){
-        if(file_exists(($this->getFolder().$currentImage) && $currentImage !=null)) {
+        if($this->fileExists($currentImage)) {
             unlink($this->getFolder() . $currentImage);
         }
     }
@@ -49,6 +49,12 @@ class ImageUpload extends Model{
         $filename = $this->genereteFileName();
         $this->image->saveAs($this->getFolder().$filename);
         return $filename;
+    }
+
+    public function fileExists($currentImage){
+        if(!empty($currentImage) && $currentImage!=null){
+            return file_exists($this->getFolder().$currentImage);
+        }
     }
 
 }

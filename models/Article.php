@@ -80,18 +80,27 @@ class Article extends \yii\db\ActiveRecord
         return $this->hasMany(Comment::className(), ['article_id' => 'id']);
     }
 
+    //сохранение названия картинки в базе
     public function saveImage($filename)
     {
         $this->image = $filename;
         return $this->save(false);
     }
 
+    //удаление картинки з базы данных
     public function deleteImage(){
         $imageUploadModel = new ImageUpload();
-        die($this->image);
         $imageUploadModel->deleteCurrentImage($this->image);
     }
 
+    //вывод картинки в листинге
+    public function getImage(){
+        
+        return ($this->image)?'/marlin_blog/web/uploads/'.$this->image:'/marlin_blog/web/no_image.png';
+
+    }
+
+    //после удаления статьи удаляем картинку
     public function beforeDelete()
     {
         $this->deleteImage();
