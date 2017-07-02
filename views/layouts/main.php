@@ -7,8 +7,10 @@ use app\assets\PublicAsset;
 use yii\helpers\Html;
 use yii\bootstrap\Nav;
 use yii\bootstrap\NavBar;
+use yii\helpers\Url;
 use yii\widgets\Breadcrumbs;
 use app\assets\AppAsset;
+
 
 PublicAsset::register($this);
 ?>
@@ -51,8 +53,17 @@ PublicAsset::register($this);
                 </ul>
                 <div class="i_con">
                     <ul class="nav navbar-nav text-uppercase">
-                        <li><a href="/site/login">Login</a></li>
-                        <li><a href="/site/signup">Register</a></li>
+                        <?php if(Yii::$app->user->isGuest):?>
+                            <li><a href="<?=Url::toRoute(['auth/login'])?>">Login</a></li>
+                            <li><a href="<?=Url::toRoute(['auth/signup'])?>">Register</a></li>
+                        <?php else:?>
+                            <?=Html::beginForm(['/auth/logout'],'post')
+                            . Html::submitButton(
+                                    'logout('.Yii::$app->user->identity->name . ')',
+                                    ['class'=>'btn btn-link logout','style'=>"padding-top:20px;"]
+                            )
+                            . Html::endForm()?>
+                        <?php endif;?>
                     </ul>
                 </div>
 
