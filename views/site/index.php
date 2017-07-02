@@ -1,207 +1,65 @@
+<?php
+use yii\widgets\LinkPager;
+?>
 <!--main content start-->
 <div class="main-content">
     <div class="container">
         <div class="row">
+
             <div class="col-md-8">
-                <article class="post">
-                    <div class="post-thumb">
-                        <a href="view"><img src="/marlin_blog/web/public/images/blog-1.jpg" alt=""></a>
 
-                        <a href="view" class="post-thumb-overlay text-center">
-                            <div class="text-uppercase text-center">View Post</div>
-                        </a>
-                    </div>
-                    <div class="post-content">
-                        <header class="entry-header text-center text-uppercase">
-                            <h6><a href="#"> Travel</a></h6>
+                <?php foreach ($articles as $article):?>
+                    <article class="post">
+                        <div class="post-thumb">
+                            <a href="view"><img src="<?=$article->getImage();?>" alt=""></a>
 
-                            <h1 class="entry-title"><a href="view">Home is peaceful place</a></h1>
+                            <a href="view" class="post-thumb-overlay text-center">
+                                <div class="text-uppercase text-center">View Post</div>
+                            </a>
+                        </div>
+                        <div class="post-content">
+                            <header class="entry-header text-center text-uppercase">
+                                <h6><a href="#"> <?php echo ($article->category_id!=null)?$article->category->title:"no-category"?></a></h6>
+
+                                <h1 class="entry-title"><a href="view"><?=$article->title?></a></h1>
 
 
-                        </header>
-                        <div class="entry-content">
-                            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
-                                tevidulabore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et
-                                justo duo dolores rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem
-                                ipsum dolor sit am Lorem ipsum dolor sitconsetetur sadipscing elitr, sed diam nonumy
-                                eirmod tempor invidunt ut labore et dolore maliquyam erat, sed diam voluptua.
-                            </p>
+                            </header>
+                            <div class="entry-content">
+                                <p>
+                                    <?=$article->description?>
+                                </p>
 
-                            <div class="btn-continue-reading text-center text-uppercase">
-                                <a href="view" class="more-link">Continue Reading</a>
+                                <div class="btn-continue-reading text-center text-uppercase">
+                                    <a href="view" class="more-link">Continue Reading</a>
+                                </div>
+                            </div>
+                            <div class="social-share">
+                                <span class="social-share-title pull-left text-capitalize">By <a href="#">Rubel</a> <?=$article->date?></span>
+                                <ul class="text-center pull-right">
+                                    <li><a class="s-facebook" href="#"><i class="fa fa-eye"></i></a></li><?=(int)$article->viewed?>
+                                </ul>
                             </div>
                         </div>
-                        <div class="social-share">
-                            <span class="social-share-title pull-left text-capitalize">By <a href="#">Rubel</a> On February 12, 2016</span>
-                            <ul class="text-center pull-right">
-                                <li><a class="s-facebook" href="#"><i class="fa fa-eye"></i></a></li>325
-                            </ul>
-                        </div>
-                    </div>
-                </article>
-                <article class="post">
-                    <div class="post-thumb">
-                        <a href="view"><img src="/marlin_blog/web/public/images/abc.jpg" alt=""></a>
+                    </article>
+                <?php endforeach;?>
 
-                        <a href="view" class="post-thumb-overlay text-center">
-                            <div class="text-uppercase text-center">View Post</div>
-                        </a>
-                    </div>
-                    <div class="post-content">
-                        <header class="entry-header text-center text-uppercase">
-                            <h6><a href="#">craft</a></h6>
-
-                            <h1 class="entry-title"><a href="view">wooden table is beautiful</a></h1>
-
-
-                        </header>
-                        <div class="entry-content">
-                            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
-                                tevidulabore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et
-                                justo duo dolores rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem
-                                ipsum dolor sit am Lorem ipsum dolor sitconsetetur sadipscing elitr, sed diam nonumy
-                                eirmod tempor invidunt ut labore et dolore maliquyam erat, sed diam voluptua.
-                            </p>
-
-                            <div class="btn-continue-reading text-center text-uppercase">
-                                <a href="view" class="more-link">Continue Reading</a>
-                            </div>
-                        </div>
-                        <div class="social-share">
-                            <span class="social-share-title pull-left text-capitalize">By <a href="#">Rubel</a> On February 12, 2016</span>
-                            <ul class="text-center pull-right">
-                                <li><a class="s-facebook" href="#"><i class="fa fa-eye"></i></a></li>325
-                            </ul>
-                        </div>
-                    </div>
-                </article>
-                <article class="post">
-                    <div class="post-thumb">
-                        <a href="view"><img src="/marlin_blog/web/public/images/blog-2.jpg" alt=""></a>
-
-                        <a href="view" class="post-thumb-overlay text-center">
-                            <div class="text-uppercase text-center">View Post</div>
-                        </a>
-                    </div>
-                    <div class="post-content">
-                        <header class="entry-header text-center text-uppercase">
-                            <h6><a href="#"> Lifestyle</a></h6>
-
-                            <h1 class="entry-title"><a href="view">Small work station</a></h1>
-
-
-                        </header>
-                        <div class="entry-content">
-                            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
-                                tevidulabore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et
-                                justo duo dolores rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem
-                                ipsum dolor sit am Lorem ipsum dolor sitconsetetur sadipscing elitr, sed diam nonumy
-                                eirmod tempor invidunt ut labore et dolore maliquyam erat, sed diam voluptua.
-                            </p>
-
-                            <div class="btn-continue-reading text-center text-uppercase">
-                                <a href="view" class="more-link">Continue Reading</a>
-                            </div>
-                        </div>
-                        <div class="social-share">
-                            <span class="social-share-title pull-left text-capitalize">By <a href="#">Rubel</a> On February 12, 2016</span>
-                            <ul class="text-center pull-right">
-                                <li><a class="s-facebook" href="#"><i class="fa fa-eye"></i></a></li>325
-                            </ul>
-                        </div>
-                    </div>
-                </article>
-                <article class="post">
-                    <div class="post-thumb">
-                        <a href="view"><img src="/marlin_blog/web/public/images/blog-3.jpg" alt=""></a>
-
-                        <a href="view" class="post-thumb-overlay text-center">
-                            <div class="text-uppercase text-center">View Post</div>
-                        </a>
-                    </div>
-                    <div class="post-content">
-                        <header class="entry-header text-center text-uppercase">
-                            <h6><a href="#"> Mission</a></h6>
-
-                            <h1 class="entry-title"><a href="view">Waiting to launch on the sky</a></h1>
-
-
-                        </header>
-                        <div class="entry-content">
-                            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
-                                tevidulabore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et
-                                justo duo dolores rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem
-                                ipsum dolor sit am Lorem ipsum dolor sitconsetetur sadipscing elitr, sed diam nonumy
-                                eirmod tempor invidunt ut labore et dolore maliquyam erat, sed diam voluptua.
-                            </p>
-
-                            <div class="btn-continue-reading text-center text-uppercase">
-                                <a href="view" class="more-link">Continue Reading</a>
-                            </div>
-                        </div>
-                        <div class="social-share">
-                            <span class="social-share-title pull-left text-capitalize">By <a href="#">Rubel</a> On February 12, 2016</span>
-                            <ul class="text-center pull-right">
-                                <li><a class="s-facebook" href="#"><i class="fa fa-eye"></i></a></li>325
-                            </ul>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="post">
-                    <div class="post-thumb">
-                        <a href="view"><img src="/marlin_blog/web/public/images/blog-4.jpg" alt=""></a>
-
-                        <a href="view" class="post-thumb-overlay text-center">
-                            <div class="text-uppercase text-center">View Post</div>
-                        </a>
-                    </div>
-                    <div class="post-content">
-                        <header class="entry-header text-center text-uppercase">
-                            <h6><a href="#"> Cloth</a></h6>
-
-                            <h1 class="entry-title"><a href="view">A day labour wore jeans</a></h1>
-
-
-                        </header>
-                        <div class="entry-content">
-                            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
-                                tevidulabore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et
-                                justo duo dolores rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem
-                                ipsum dolor sit am Lorem ipsum dolor sitconsetetur sadipscing elitr, sed diam nonumy
-                                eirmod tempor invidunt ut labore et dolore maliquyam erat, sed diam voluptua.
-                            </p>
-
-                            <div class="btn-continue-reading text-center text-uppercase">
-                                <a href="view" class="more-link">Continue Reading</a>
-                            </div>
-                        </div>
-                        <div class="social-share">
-                            <span class="social-share-title pull-left text-capitalize">By <a href="#">Rubel</a> On February 12, 2016</span>
-                            <ul class="text-center pull-right">
-                                <li><a class="s-facebook" href="#"><i class="fa fa-eye"></i></a></li>325
-                            </ul>
-                        </div>
-                    </div>
-                </article>
-                <ul class="pagination">
-                    <li class="active"><a href="#">1</a></li>
-                    <li><a href="#">2</a></li>
-                    <li><a href="#">3</a></li>
-                    <li><a href="#">4</a></li>
-                    <li><a href="#"><i class="fa fa-angle-double-right"></i></a></li>
-                </ul>
+                <?php
+                    echo LinkPager::widget([
+                        'pagination' => $pagination,
+                    ]);
+                ?>
             </div>
+
             <div class="col-md-4" data-sticky_column>
                 <div class="primary-sidebar">
-
                     <aside class="widget">
                         <h3 class="widget-title text-uppercase text-center">Popular Posts</h3>
 
                         <div class="popular-post">
 
 
-                            <a href="#" class="popular-img"><img src="/marlin_blog/web/public/images/p1.jpg" alt="">
+                            <a href="#" class="popular-img"><img src="/public/images/p1.jpg" alt="">
 
                                 <div class="p-overlay"></div>
                             </a>
@@ -214,7 +72,7 @@
                         </div>
                         <div class="popular-post">
 
-                            <a href="#" class="popular-img"><img src="/marlin_blog/web/public/images/p1.jpg" alt="">
+                            <a href="#" class="popular-img"><img src="/public/images/p1.jpg" alt="">
 
                                 <div class="p-overlay"></div>
                             </a>
@@ -227,7 +85,7 @@
                         <div class="popular-post">
 
 
-                            <a href="#" class="popular-img"><img src="/marlin_blog/web/public/images/p1.jpg" alt="">
+                            <a href="#" class="popular-img"><img src="/public/images/p1.jpg" alt="">
 
                                 <div class="p-overlay"></div>
                             </a>
@@ -246,7 +104,7 @@
 
                             <div class="media">
                                 <div class="media-left">
-                                    <a href="#" class="popular-img"><img src="/marlin_blog/web/public/images/r-p.jpg" alt="">
+                                    <a href="#" class="popular-img"><img src="/public/images/r-p.jpg" alt="">
                                         <div class="p-overlay"></div>
                                     </a>
                                 </div>
@@ -261,7 +119,7 @@
 
                             <div class="media">
                                 <div class="media-left">
-                                    <a href="#" class="popular-img"><img src="/marlin_blog/web/public/images/r-p.jpg" alt="">
+                                    <a href="#" class="popular-img"><img src="/public/images/r-p.jpg" alt="">
                                         <div class="p-overlay"></div>
                                     </a>
                                 </div>
@@ -276,7 +134,7 @@
 
                             <div class="media">
                                 <div class="media-left">
-                                    <a href="#" class="popular-img"><img src="/marlin_blog/web/public/images/r-p.jpg" alt="">
+                                    <a href="#" class="popular-img"><img src="/public/images/r-p.jpg" alt="">
                                         <div class="p-overlay"></div>
                                     </a>
                                 </div>
@@ -291,7 +149,7 @@
 
                             <div class="media">
                                 <div class="media-left">
-                                    <a href="#" class="popular-img"><img src="/marlin_blog/web/public/images/r-p.jpg" alt="">
+                                    <a href="#" class="popular-img"><img src="/public/images/r-p.jpg" alt="">
                                         <div class="p-overlay"></div>
                                     </a>
                                 </div>

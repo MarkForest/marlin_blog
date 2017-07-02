@@ -97,7 +97,7 @@ class Article extends \yii\db\ActiveRecord
     //вывод картинки в листинге
     public function getImage(){
 
-        return ($this->image)?'/marlin_blog/web/uploads/'.$this->image:'/marlin_blog/web/no_image.png';
+        return ($this->image)?'/uploads/'.$this->image:'/no_image.png';
 
     }
 

@@ -8,7 +8,7 @@
                     <div class="row">
                         <div class="col-md-6">
                             <div class="post-thumb">
-                                <a href="blog.html"><img src="/marlin_blog/web/public/images/blog-grid.jpg" alt="" class="pull-left"></a>
+                                <a href="blog.html"><img src="/public/images/blog-grid.jpg" alt="" class="pull-left"></a>
 
                                 <a href="blog.html" class="post-thumb-overlay text-center">
                                     <div class="text-uppercase text-center">View Post</div>
@@ -38,7 +38,7 @@
                     <div class="row">
                         <div class="col-md-6">
                             <div class="post-thumb">
-                                <a href="blog.html"><img src="/marlin_blog/web/public/images/blog-grid.jpg" alt="" class="pull-left"></a>
+                                <a href="blog.html"><img src="/public/images/blog-grid.jpg" alt="" class="pull-left"></a>
 
                                 <a href="blog.html" class="post-thumb-overlay text-center">
                                     <div class="text-uppercase text-center">View Post</div>
@@ -68,7 +68,7 @@
                     <div class="row">
                         <div class="col-md-6">
                             <div class="post-thumb">
-                                <a href="blog.html"><img src="/marlin_blog/web/public/images/blog-grid.jpg" alt="" class="pull-left"></a>
+                                <a href="blog.html"><img src="/public/images/blog-grid.jpg" alt="" class="pull-left"></a>
 
                                 <a href="blog.html" class="post-thumb-overlay text-center">
                                     <div class="text-uppercase text-center">View Post</div>
@@ -98,7 +98,7 @@
                     <div class="row">
                         <div class="col-md-6">
                             <div class="post-thumb">
-                                <a href="blog.html"><img src="/marlin_blog/web/public/images/blog-grid.jpg" alt="" class="pull-left"></a>
+                                <a href="blog.html"><img src="/public/images/blog-grid.jpg" alt="" class="pull-left"></a>
 
                                 <a href="blog.html" class="post-thumb-overlay text-center">
                                     <div class="text-uppercase text-center">View Post</div>
@@ -141,7 +141,7 @@
                         <div class="popular-post">
 
 
-                            <a href="#" class="popular-img"><img src="/marlin_blog/web/public/images/p1.jpg" alt="">
+                            <a href="#" class="popular-img"><img src="/public/images/p1.jpg" alt="">
 
                                 <div class="p-overlay"></div>
                             </a>
@@ -154,7 +154,7 @@
                         </div>
                         <div class="popular-post">
 
-                            <a href="#" class="popular-img"><img src="/marlin_blog/web/public/images/p1.jpg" alt="">
+                            <a href="#" class="popular-img"><img src="/public/images/p1.jpg" alt="">
 
                                 <div class="p-overlay"></div>
                             </a>
@@ -167,7 +167,7 @@
                         <div class="popular-post">
 
 
-                            <a href="#" class="popular-img"><img src="/marlin_blog/web/public/images/p1.jpg" alt="">
+                            <a href="#" class="popular-img"><img src="/public/images/p1.jpg" alt="">
 
                                 <div class="p-overlay"></div>
                             </a>
@@ -186,7 +186,7 @@
 
                             <div class="media">
                                 <div class="media-left">
-                                    <a href="#" class="popular-img"><img src="/marlin_blog/web/public/images/r-p.jpg" alt="">
+                                    <a href="#" class="popular-img"><img src="/public/images/r-p.jpg" alt="">
 
                                         <div class="p-overlay"></div>
                                     </a>
@@ -202,7 +202,7 @@
 
                             <div class="media">
                                 <div class="media-left">
-                                    <a href="#" class="popular-img"><img src="/marlin_blog/web/public/images/r-p.jpg" alt="">
+                                    <a href="#" class="popular-img"><img src="/public/images/r-p.jpg" alt="">
 
                                         <div class="p-overlay"></div>
                                     </a>
@@ -218,7 +218,7 @@
 
                             <div class="media">
                                 <div class="media-left">
-                                    <a href="#" class="popular-img"><img src="/marlin_blog/web/public/images/r-p.jpg" alt="">
+                                    <a href="#" class="popular-img"><img src="/public/images/r-p.jpg" alt="">
 
                                         <div class="p-overlay"></div>
                                     </a>
@@ -234,7 +234,7 @@
 
                             <div class="media">
                                 <div class="media-left">
-                                    <a href="#" class="popular-img"><img src="/marlin_blog/web/public/images/r-p.jpg" alt="">
+                                    <a href="#" class="popular-img"><img src="/public/images/r-p.jpg" alt="">
 
                                         <div class="p-overlay"></div>
                                     </a>
@@ -280,31 +280,31 @@
 
                         <div class="instragram-follow">
                             <a href="#">
-                                <img src="/marlin_blog/web/public/images/ins-flow.jpg" alt="">
+                                <img src="/public/images/ins-flow.jpg" alt="">
                             </a>
                             <a href="#">
-                                <img src="/marlin_blog/web/public/images/ins-flow.jpg" alt="">
+                                <img src="/public/images/ins-flow.jpg" alt="">
                             </a>
                             <a href="#">
-                                <img src="/marlin_blog/web/public/images/ins-flow.jpg" alt="">
+                                <img src="/public/images/ins-flow.jpg" alt="">
                             </a>
                             <a href="#">
-                                <img src="/marlin_blog/web/public/images/ins-flow.jpg" alt="">
+                                <img src="/public/images/ins-flow.jpg" alt="">
                             </a>
                             <a href="#">
-                                <img src="/marlin_blog/web/public/images/ins-flow.jpg" alt="">
+                                <img src="/public/images/ins-flow.jpg" alt="">
                             </a>
                             <a href="#">
-                                <img src="/marlin_blog/web/public/images/ins-flow.jpg" alt="">
+                                <img src="/public/images/ins-flow.jpg" alt="">
                             </a>
                             <a href="#">
-                                <img src="/marlin_blog/web/public/images/ins-flow.jpg" alt="">
+                                <img src="/public/images/ins-flow.jpg" alt="">
                             </a>
                             <a href="#">
-                                <img src="/marlin_blog/web/public/images/ins-flow.jpg" alt="">
+                                <img src="/public/images/ins-flow.jpg" alt="">
                             </a>
                             <a href="#">
-                                <img src="/marlin_blog/web/public/images/ins-flow.jpg" alt="">
+                                <img src="/public/images/ins-flow.jpg" alt="">
                             </a>
 
                         </div>

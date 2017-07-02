@@ -38,21 +38,21 @@ PublicAsset::register($this);
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="/marlin_blog/web/site/"><img src="/marlin_blog/web/public/images/logo.jpg" alt=""></a>
+                <a class="navbar-brand" href="/site/index"><img src="/public/images/logo.jpg" alt=""></a>
             </div>
 
 
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
                 <ul class="nav navbar-nav text-uppercase">
-                    <li><a data-toggle="dropdown" class="dropdown-toggle" href="/marlin_blog/web/site/">Home</a>
+                    <li><a data-toggle="dropdown" class="dropdown-toggle" href="/site/index">Home</a>
 
                     </li>
                 </ul>
                 <div class="i_con">
                     <ul class="nav navbar-nav text-uppercase">
-                        <li><a href="/marlin_blog/web/site/login">Login</a></li>
-                        <li><a href="/marlin_blog/web/site/signup">Register</a></li>
+                        <li><a href="/site/login">Login</a></li>
+                        <li><a href="/site/signup">Register</a></li>
                     </ul>
                 </div>
 
@@ -73,7 +73,7 @@ PublicAsset::register($this);
         <div class="row">
             <div class="col-md-4">
                 <aside class="footer-widget">
-                    <div class="about-img"><img src="/marlin_blog/web/public/images/logo2.png" alt=""></div>
+                    <div class="about-img"><img src="/public/images/logo2.png" alt=""></div>
                     <div class="about-content">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
                         eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed voluptua. At vero eos et
                         accusam et justo duo dlores et ea rebum magna text ar koto din.
@@ -111,7 +111,7 @@ PublicAsset::register($this);
                                             magna aliquyam eratma</p>
                                     </div>
                                     <div class="author-id">
-                                        <img src="/marlin_blog/web/public/images/author.png" alt="">
+                                        <img src="/public/images/author.png" alt="">
 
                                         <div class="author-text">
                                             <h4>Sophia</h4>
@@ -130,7 +130,7 @@ PublicAsset::register($this);
                                             magna aliquyam eratma</p>
                                     </div>
                                     <div class="author-id">
-                                        <img src="/marlin_blog/web/public/images/author.png" alt="">
+                                        <img src="/public/images/author.png" alt="">
 
                                         <div class="author-text">
                                             <h4>Sophia</h4>
@@ -149,7 +149,7 @@ PublicAsset::register($this);
                                             magna aliquyam eratma</p>
                                     </div>
                                     <div class="author-id">
-                                        <img src="/marlin_blog/web/public/images/author.png" alt="">
+                                        <img src="/public/images/author.png" alt="">
 
                                         <div class="author-text">
                                             <h4>Sophia</h4>
@@ -171,7 +171,7 @@ PublicAsset::register($this);
 
                     <div class="custom-post">
                         <div>
-                            <a href="#"><img src="/marlin_blog/web/public/images/footer-img.png" alt=""></a>
+                            <a href="#"><img src="/public/images/footer-img.png" alt=""></a>
                         </div>
                         <div>
                             <a href="#" class="text-uppercase">Home is peaceful Place</a>

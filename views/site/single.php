@@ -5,7 +5,7 @@
             <div class="col-md-8">
                 <article class="post">
                     <div class="post-thumb">
-                        <a href="blog.html"><img src="/marlin_blog/web/public/images/blog-1.jpg" alt=""></a>
+                        <a href="blog.html"><img src="/public/images/blog-1.jpg" alt=""></a>
                     </div>
                     <div class="post-content">
                         <header class="entry-header text-center text-uppercase">
@@ -98,7 +98,7 @@
                     </div>
                 </article>
                 <div class="top-comment"><!--top comment-->
-                    <img src="/marlin_blog/web/public/images/comment.jpg" class="pull-left img-circle" alt="">
+                    <img src="/public/images/comment.jpg" class="pull-left img-circle" alt="">
                     <h4>Rubel Miah</h4>
 
                     <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy hello ro mod tempor
@@ -108,7 +108,7 @@
                     <div class="col-md-6">
                         <div class="single-blog-box">
                             <a href="#">
-                                <img src="/marlin_blog/web/public/images/blog-next.jpg" alt="">
+                                <img src="/public/images/blog-next.jpg" alt="">
 
                                 <div class="overlay">
 
@@ -125,7 +125,7 @@
                     <div class="col-md-6">
                         <div class="single-blog-box">
                             <a href="#">
-                                <img src="/marlin_blog/web/public/images/blog-next.jpg" alt="">
+                                <img src="/public/images/blog-next.jpg" alt="">
 
                                 <div class="overlay">
                                     <div class="promo-text">
@@ -145,7 +145,7 @@
                     <div class="items">
                         <div class="single-item">
                             <a href="#">
-                                <img src="/marlin_blog/web/public/images/related-post-1.jpg" alt="">
+                                <img src="/public/images/related-post-1.jpg" alt="">
 
                                 <p>Just Wondering at Beach</p>
                             </a>
@@ -154,7 +154,7 @@
 
                         <div class="single-item">
                             <a href="#">
-                                <img src="/marlin_blog/web/public/images/related-post-2.jpg" alt="">
+                                <img src="/public/images/related-post-2.jpg" alt="">
 
                                 <p>Just Wondering at Beach</p>
                             </a>
@@ -163,7 +163,7 @@
 
                         <div class="single-item">
                             <a href="#">
-                                <img src="/marlin_blog/web/public/images/related-post-3.jpg" alt="">
+                                <img src="/public/images/related-post-3.jpg" alt="">
 
                                 <p>Just Wondering at Beach</p>
                             </a>
@@ -172,7 +172,7 @@
 
                         <div class="single-item">
                             <a href="#">
-                                <img src="/marlin_blog/web/public/images/related-post-1.jpg" alt="">
+                                <img src="/public/images/related-post-1.jpg" alt="">
 
                                 <p>Just Wondering at Beach</p>
                             </a>
@@ -180,7 +180,7 @@
 
                         <div class="single-item">
                             <a href="#">
-                                <img src="/marlin_blog/web/public/images/related-post-2.jpg" alt="">
+                                <img src="/public/images/related-post-2.jpg" alt="">
 
                                 <p>Just Wondering at Beach</p>
                             </a>
@@ -189,7 +189,7 @@
 
                         <div class="single-item">
                             <a href="#">
-                                <img src="/marlin_blog/web/public/images/related-post-3.jpg" alt="">
+                                <img src="/public/images/related-post-3.jpg" alt="">
 
                                 <p>Just Wondering at Beach</p>
                             </a>
@@ -200,7 +200,7 @@
                     <h4>3 comments</h4>
 
                     <div class="comment-img">
-                        <img class="img-circle" src="/marlin_blog/web/public/images/comment-img.jpg" alt="">
+                        <img class="img-circle" src="/public/images/comment-img.jpg" alt="">
                     </div>
 
                     <div class="comment-text">
@@ -260,7 +260,7 @@
                         <div class="popular-post">
 
 
-                            <a href="#" class="popular-img"><img src="/marlin_blog/web/public/images/p1.jpg" alt="">
+                            <a href="#" class="popular-img"><img src="/public/images/p1.jpg" alt="">
 
                                 <div class="p-overlay"></div>
                             </a>
@@ -273,7 +273,7 @@
                         </div>
                         <div class="popular-post">
 
-                            <a href="#" class="popular-img"><img src="/marlin_blog/web/public/images/p1.jpg" alt="">
+                            <a href="#" class="popular-img"><img src="/public/images/p1.jpg" alt="">
 
                                 <div class="p-overlay"></div>
                             </a>
@@ -286,7 +286,7 @@
                         <div class="popular-post">
 
 
-                            <a href="#" class="popular-img"><img src="/marlin_blog/web/public/images/p1.jpg" alt="">
+                            <a href="#" class="popular-img"><img src="/public/images/p1.jpg" alt="">
 
                                 <div class="p-overlay"></div>
                             </a>
@@ -304,7 +304,7 @@
 
                             <div class="media">
                                 <div class="media-left">
-                                    <a href="#" class="popular-img"><img src="/marlin_blog/web/public/images/r-p.jpg" alt="">
+                                    <a href="#" class="popular-img"><img src="/public/images/r-p.jpg" alt="">
 
                                         <div class="p-overlay"></div>
                                     </a>
@@ -320,7 +320,7 @@
 
                             <div class="media">
                                 <div class="media-left">
-                                    <a href="#" class="popular-img"><img src="/marlin_blog/web/public/images/r-p.jpg" alt="">
+                                    <a href="#" class="popular-img"><img src="/public/images/r-p.jpg" alt="">
 
                                         <div class="p-overlay"></div>
                                     </a>
@@ -336,7 +336,7 @@
 
                             <div class="media">
                                 <div class="media-left">
-                                    <a href="#" class="popular-img"><img src="/marlin_blog/web/public/images/r-p.jpg" alt="">
+                                    <a href="#" class="popular-img"><img src="/public/images/r-p.jpg" alt="">
 
                                         <div class="p-overlay"></div>
                                     </a>
@@ -352,7 +352,7 @@
 
                             <div class="media">
                                 <div class="media-left">
-                                    <a href="#" class="popular-img"><img src="/marlin_blog/web/public/images/r-p.jpg" alt="">
+                                    <a href="#" class="popular-img"><img src="/public/images/r-p.jpg" alt="">
 
                                         <div class="p-overlay"></div>
                                     </a>
