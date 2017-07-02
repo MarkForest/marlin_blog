@@ -138,6 +138,10 @@ class Article extends \yii\db\ActiveRecord
         return ArrayHelper::getColumn($selectedTags,'id');
     }
 
+    public  function getSelectedTagsTitles(){
+        return $this->getTags()->select('title')->asArray()->all();
+    }
+
     public function saveTags($tags)
     {
         //удаляем текущие теги

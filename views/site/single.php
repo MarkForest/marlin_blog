@@ -1,3 +1,6 @@
+<?php
+use yii\helpers\Url;
+?>
 <!--main content start-->
 <div class="main-content">
     <div class="container">
@@ -5,88 +8,32 @@
             <div class="col-md-8">
                 <article class="post">
                     <div class="post-thumb">
-                        <a href="blog.html"><img src="/public/images/blog-1.jpg" alt=""></a>
+                        <a href="blog.html"><img src="<?=
+
+                            $article->getImage();?>" alt=""></a>
                     </div>
                     <div class="post-content">
                         <header class="entry-header text-center text-uppercase">
-                            <h6><a href="#"> Travel</a></h6>
+                            <h6><a href="<?=Url::toRoute(['site/category','id'=>$article->category_id])?>"><?php echo ($article->category_id!=null)?$article->category->title:"no-category"?></a></h6>
 
-                            <h1 class="entry-title"><a href="blog.html">Home is peaceful place</a></h1>
+                            <h1 class="entry-title"><a href="blog.html"><?=$article->title?></a></h1>
 
 
                         </header>
                         <div class="entry-content">
-                            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
-                                tevidulabore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et
-                                justo duo dolores rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem
-                                ipsum dolor sit am Lorem ipsum dolor sitconsetetur sadipscing elitr, sed diam nonumy
-                                eirmod tempor invidunt ut labore et dolore maliquyam erat, sed diam voluptua.
-                            </p>
-
-                            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirtempor
-                                invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero accusam et
-                                justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctusest
-                                Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elised
-                                diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sdiam
-                                voluptua. At vero eos et accusam.
-                            </p>
-
-                            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirtempor
-                                invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero accusam et
-                                justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctusest
-                                Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elised
-                                diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sdiam
-                                voluptua. At vero eos et accusam.
-                            </p>
-
-                            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirtempor
-                                invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero accusam et
-                                justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctusest
-                                Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elised
-                                diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sdiam
-                                voluptua. At vero eos et accusam.
-                            </p>
-
-                            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirtempor
-                                invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero accusam et
-                                justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctusest
-                                Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elised
-                                diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sdiam
-                                voluptua. At vero eos et accusam.
-                            </p>
-
-                            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirtempor
-                                invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero accusam et
-                                justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctusest
-                                Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elised
-                                diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sdiam
-                                voluptua. At vero eos et accusam.
-                            </p>
-
-                            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirtempor
-                                invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero accusam et
-                                justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctusest
-                                Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elised
-                                diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sdiam
-                                voluptua. At vero eos et accusam.
-                            </p>
-
-                            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirtempor
-                                invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero accusam et
-                                justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctusest
-                                Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elised
-                                diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sdiam
-                                voluptua. At vero eos et accusam.
+                            <p>
+                                <?=$article->content?>
                             </p>
                         </div>
                         <div class="decoration">
-                            <a href="#" class="btn btn-default">Decoration</a>
-                            <a href="#" class="btn btn-default">Decoration</a>
+                            <?php foreach ($tags as $tag):?>
+                                <a href="#" class="btn btn-default"><?=$tag['title']?></a>
+                            <?php endforeach;?>
                         </div>
 
                         <div class="social-share">
 							<span
-                                class="social-share-title pull-left text-capitalize">By Rubel On February 12, 2016</span>
+                                class="social-share-title pull-left text-capitalize">By Rubel On <?=$article->getDate();?></span>
                             <ul class="text-center pull-right">
                                 <li><a class="s-facebook" href="#"><i class="fa fa-facebook"></i></a></li>
                                 <li><a class="s-twitter" href="#"><i class="fa fa-twitter"></i></a></li>
@@ -226,22 +173,7 @@
 
 
                     <form class="form-horizontal contact-form" role="form" method="post" action="#">
-                        <div class="form-group">
-                            <div class="col-md-6">
-                                <input type="text" class="form-control" id="name" name="name" placeholder="Name">
-                            </div>
-                            <div class="col-md-6">
-                                <input type="email" class="form-control" id="email" name="email"
-                                       placeholder="Email">
-                            </div>
-                        </div>
 
-                        <div class="form-group">
-                            <div class="col-md-12">
-                                <input type="text" class="form-control" id="subject" name="subject"
-                                       placeholder="Website url">
-                            </div>
-                        </div>
                         <div class="form-group">
                             <div class="col-md-12">
 										<textarea class="form-control" rows="6" name="message"
@@ -249,151 +181,16 @@
                             </div>
                         </div>
                         <a href="#" class="btn send-btn">Post Comment</a>
+
                     </form>
                 </div><!--end leave comment-->
             </div>
             <div class="col-md-4" data-sticky_column>
-                <div class="primary-sidebar">
-                    <aside class="widget">
-                        <h3 class="widget-title text-uppercase text-center">Popular Posts</h3>
-
-                        <div class="popular-post">
-
-
-                            <a href="#" class="popular-img"><img src="/public/images/p1.jpg" alt="">
-
-                                <div class="p-overlay"></div>
-                            </a>
-
-                            <div class="p-content">
-                                <a href="#" class="text-uppercase">Home is peaceful Place</a>
-                                <span class="p-date">February 15, 2016</span>
-
-                            </div>
-                        </div>
-                        <div class="popular-post">
-
-                            <a href="#" class="popular-img"><img src="/public/images/p1.jpg" alt="">
-
-                                <div class="p-overlay"></div>
-                            </a>
-
-                            <div class="p-content">
-                                <a href="#" class="text-uppercase">Home is peaceful Place</a>
-                                <span class="p-date">February 15, 2016</span>
-                            </div>
-                        </div>
-                        <div class="popular-post">
-
-
-                            <a href="#" class="popular-img"><img src="/public/images/p1.jpg" alt="">
-
-                                <div class="p-overlay"></div>
-                            </a>
-
-                            <div class="p-content">
-                                <a href="#" class="text-uppercase">Home is peaceful Place</a>
-                                <span class="p-date">February 15, 2016</span>
-                            </div>
-                        </div>
-                    </aside>
-                    <aside class="widget pos-padding">
-                        <h3 class="widget-title text-uppercase text-center">Recent Posts</h3>
-
-                        <div class="thumb-latest-posts">
-
-                            <div class="media">
-                                <div class="media-left">
-                                    <a href="#" class="popular-img"><img src="/public/images/r-p.jpg" alt="">
-
-                                        <div class="p-overlay"></div>
-                                    </a>
-                                </div>
-                                <div class="p-content">
-                                    <a href="#" class="text-uppercase">Home is peaceful Place</a>
-                                    <span class="p-date">February 15, 2016</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="thumb-latest-posts">
-
-
-                            <div class="media">
-                                <div class="media-left">
-                                    <a href="#" class="popular-img"><img src="/public/images/r-p.jpg" alt="">
-
-                                        <div class="p-overlay"></div>
-                                    </a>
-                                </div>
-                                <div class="p-content">
-                                    <a href="#" class="text-uppercase">Home is peaceful Place</a>
-                                    <span class="p-date">February 15, 2016</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="thumb-latest-posts">
-
-
-                            <div class="media">
-                                <div class="media-left">
-                                    <a href="#" class="popular-img"><img src="/public/images/r-p.jpg" alt="">
-
-                                        <div class="p-overlay"></div>
-                                    </a>
-                                </div>
-                                <div class="p-content">
-                                    <a href="#" class="text-uppercase">Home is peaceful Place</a>
-                                    <span class="p-date">February 15, 2016</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="thumb-latest-posts">
-
-
-                            <div class="media">
-                                <div class="media-left">
-                                    <a href="#" class="popular-img"><img src="/public/images/r-p.jpg" alt="">
-
-                                        <div class="p-overlay"></div>
-                                    </a>
-                                </div>
-                                <div class="p-content">
-                                    <a href="#" class="text-uppercase">Home is peaceful Place</a>
-                                    <span class="p-date">February 15, 2016</span>
-                                </div>
-                            </div>
-                        </div>
-                    </aside>
-                    <aside class="widget border pos-padding">
-                        <h3 class="widget-title text-uppercase text-center">Categories</h3>
-                        <ul>
-                            <li>
-                                <a href="#">Food & Drinks</a>
-                                <span class="post-count pull-right"> (2)</span>
-                            </li>
-                            <li>
-                                <a href="#">Travel</a>
-                                <span class="post-count pull-right"> (2)</span>
-                            </li>
-                            <li>
-                                <a href="#">Business</a>
-                                <span class="post-count pull-right"> (2)</span>
-                            </li>
-                            <li>
-                                <a href="#">Story</a>
-                                <span class="post-count pull-right"> (2)</span>
-                            </li>
-                            <li>
-                                <a href="#">DIY & Tips</a>
-                                <span class="post-count pull-right"> (2)</span>
-                            </li>
-                            <li>
-                                <a href="#">Lifestyle</a>
-                                <span class="post-count pull-right"> (2)</span>
-                            </li>
-                        </ul>
-                    </aside>
-                </div>
+                <?= $this->render('/partials/sidebar',[
+                    'popular'=>$popular,
+                    'recent'=>$recent,
+                    'categories'=>$categories,
+                ]);?>
             </div>
         </div>
     </div>
