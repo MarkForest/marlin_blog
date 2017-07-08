@@ -4,6 +4,8 @@ namespace app\controllers;
 
 use app\models\Article;
 use app\models\Category;
+use app\models\Comment;
+use app\models\CommentForm;
 use Yii;
 use yii\data\Pagination;
 use yii\filters\AccessControl;
@@ -82,17 +84,21 @@ class SiteController extends Controller
 
     public function actionView($id){
         $article = Article::findOne($id);
+        $article->viewedCounter();
         $tags = $article->getSelectedTagsTitles();
         $popular = Article::getPopular();
         $recent = Article::getRecent();
         $categories = Category::getAll();
-
+        $comments = Comment::find()->where(['article_id'=>$id])->where(['status'=>1])->all();
+        $commentForm = new CommentForm();
         return $this->render('single',[
             'article' =>$article,
             'tags'=>$tags,
             'popular'=>$popular,
             'recent'=>$recent,
             'categories'=>$categories,
+            'comments'=>$comments,
+            'commentForm'=>$commentForm,
         ]);
     }
 
@@ -114,31 +120,18 @@ class SiteController extends Controller
     }
 
 
-    /**
-     * Displays contact page.
-     *
-     * @return Response|string
-     */
-    public function actionContact()
+    public function actionComment($id)
     {
-        $model = new ContactForm();
-        if ($model->load(Yii::$app->request->post()) && $model->contact(Yii::$app->params['adminEmail'])) {
-            Yii::$app->session->setFlash('contactFormSubmitted');
-
-            return $this->refresh();
+        $model = new CommentForm();
+        if(Yii::$app->request->isPost){
+            $model->load(Yii::$app->request->post());
+            if($model->saveComment($id))
+            {
+                Yii::$app->getSession()->setFlash('comment','Your comment will be added');
+                return $this->redirect(['site/view','id'=>$id]);
+            }
         }
-        return $this->render('contact', [
-            'model' => $model,
-        ]);
     }
 
-    /**
-     * Displays about page.
-     *
-     * @return string
-     */
-    public function actionAbout()
-    {
-        return $this->render('about');
-    }
+
 }

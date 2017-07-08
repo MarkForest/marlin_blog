@@ -1208,6 +1208,10 @@ blog css
     float: left;
 }
 
+.comment-img{
+    height: 100px;
+}
+
 .bottom-comment h5 {
     font-size: 12px;
     letter-spacing: 1px;
@@ -1638,4 +1642,9 @@ p.go-back-home a:hover {
     background: #00BFF3;
     color: #fff;
     border-color: #00BFF3;
+}
+
+.comment-photo{
+    width: 100px;
+    height: 100px;
 }

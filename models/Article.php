@@ -33,8 +33,6 @@ class Article extends \yii\db\ActiveRecord
         return 'article';
     }
 
-
-
     /**
      * @inheritdoc
      */
@@ -191,5 +189,16 @@ class Article extends \yii\db\ActiveRecord
     public static function getRecent()
     {
         return Article::find()->orderBy('date desc')->limit(4)->all();
+    }
+
+    public function saveArticle(){
+        $this->user_id = Yii::$app->user->id;
+        return $this->save();
+    }
+
+    public function viewedCounter()
+    {
+        $this->viewed +=1;
+        return $this->save(false);
     }
 }
